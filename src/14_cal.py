@@ -24,13 +24,13 @@ import calendar
 from datetime import datetime
 
 t = datetime.now()
-year = t.year
 month = t.month
+year = t.year
 
 args = sys.argv[1:]
 
 if args:
-    month = int(args[0])
+    year = int(args[0])
     if len(args) > 1:
         year = int(args[0])
         month = int(args[1])
