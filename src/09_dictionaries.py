@@ -13,6 +13,9 @@ has the following keys:
  - lat: a signed integer representing a latitude value
  - lon: a signed integer representing a longitude value
  - name: a name string for this location
+
+* Hash Maps
+* Associative Arrays
 """
 
 waypoints = [
@@ -37,15 +40,16 @@ waypoints = [
 waypoints.append({
     "lat": 40,
     "lon": 38,
-    "name": "fourth place"
+    "name": "a fourth place"
 })
 
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
-waypoints[0]["lon"] = -130
-waypoints[0]["name"] = "not a real place"
+for way in waypoints:
+    if way["name"] == "a place":
+        way.update({'name': 'not a place', 'lon': -130})
 
 # Write a loop that prints out all the field values for all the waypoints
 for d in waypoints:
     for k, v in d.items():
-        print(v)
+        print(f"{k} : {v}")
