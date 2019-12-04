@@ -16,4 +16,4 @@ with open("foo.txt", "r") as f:
 # sure that it contains what you expect it to contain
 
 with open("bar.txt", "w") as f:
-    f.write("\n".join(['one', 'two', 'three']))
+    f.write("\n".join(['1', '2', '3']))
