@@ -11,7 +11,7 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 y = [i for i in range(1, 6)]
 
-print (y)
+print(y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
@@ -35,3 +35,28 @@ x = input("Enter comma-separated numbers: ").split(',')
 y = [i for i in x if int(i) % 2 == 0]
 
 print(y)
+
+########## S T R E T C H ##########
+
+# list = []
+# for letter in 'abcd':
+#     for num in range(4):
+#         list.append((letter, num))
+# print(list)
+
+list = [(letter, num) for letter in 'abcd' for num in range(4)]
+print(list)
+
+
+# Dictionary Comprehension
+names = ['Bruce', 'Clark', 'Peter', 'Logan', 'Wade', 'Eric']
+heroes = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool', 'Crow']
+# zip(names, heroes) will zip the lists into individual tuples for each index
+
+# dict = {}
+# for name, hero in zip(names, heroes):
+#     dict[name] = hero
+# print(dict)
+
+dict = {name: hero for name, hero in zip(names, heroes)}
+print(dict)
